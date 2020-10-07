@@ -10,9 +10,9 @@ public class WordSearchGame {
     Grid grid = new Grid(10);
 
     List<String> wordsToHide = Arrays.asList("One", "Two", "Three");
-    // provide a method in Grid class for adding all words
-    wordsToHide.forEach(grid::placeInGrid);
 
-    grid.printGrid();
+    grid.placeWords(wordsToHide);
+
+    grid.displayGrid();
   }
 }
