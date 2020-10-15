@@ -81,11 +81,14 @@ public class Grid {
   }
 
   private static String charArrayToString(char[] chars) {
+    String charsToFill = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+
     StringBuilder sb = new StringBuilder();
 
     for (char value : chars) {
       if (value == '\u0000') {
-        sb.append('.');
+        int randomIndex = ThreadLocalRandom.current().nextInt(charsToFill.length());
+        sb.append(charsToFill.charAt(randomIndex));
       } else {
         sb.append(value);
       }
