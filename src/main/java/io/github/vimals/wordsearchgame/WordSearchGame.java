@@ -1,4 +1,4 @@
-package com.example;
+package io.github.vimals.wordsearchgame;
 
 import java.util.Arrays;
 import java.util.List;
